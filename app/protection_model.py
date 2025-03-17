@@ -54,18 +54,14 @@ def get_protection_methods(protection_type, max_temp, min_temp, rainfall):
         
         # High temperature, low rainfall (drought conditions)
         english_methods.append("MU - Mulching: Spread organic mulch around plants to retain soil moisture")
-        sinhala_methods.append("MU - මල්චිං: පසෙහි තෙතමනය රඳවා ගැනීමට ශාක වටා කාබනික මල්ච් පැතිරවීම")
+        sinhala_methods.append("පෙර යොදන ලද කාබනික වසුන් මේ වනවිට සම්පූර්න වශයෙන් දිරාපත් වී ඇත්නම් ,පසෙහි තෙතමනය රඳවා ගැනීම සඳහා ශාක වටා කාබනික වසුන් යොදන්න.")
         
         if max_temp >= 34:
             english_methods.append("SH - Shading: Use shade nets during peak sun hours (10am-3pm)")
-            sinhala_methods.append("SH - සෙවන: උच්ච හිරු පැය තුළ (පෙ.ව 10 - ප.ව 3) සෙවන දැල් භාවිතා කරන්න")
+            sinhala_methods.append("දැඩි හිරු එළිය ඇති වේලාවන්හිදී (පෙ.ව. 10 සිට ප.ව. 3 දක්වා) සෙවන දැල් භාවිතා කරන්න.")
         
         english_methods.append("FW - Frequent Watering: Water plants early morning or late evening")
-        sinhala_methods.append("FW - නිතර ජලය දැමීම: පැළෑටි වලට උදෑසන හෝ සවස් යාමයේ ජලය දමන්න")
-        
-        if max_temp - min_temp > 10:  # Large temperature variation
-            english_methods.append("SE - Soil Enrichment: Add compost to improve water retention")
-            sinhala_methods.append("SE - පස පොෂණය: ජලය රඳවා ගැනීම වැඩි දියුණු කිරීමට කොම්පෝස්ට් එකතු කරන්න")
+        sinhala_methods.append(" අප ඔබට සදහන් කරන ජල පරිමාව පැළෑටි වලට උදෑසන හා සවස් යාමයේ  දෙවරකට දමන්න")
             
         return {
             "english": english_methods,
@@ -79,23 +75,20 @@ def get_protection_methods(protection_type, max_temp, min_temp, rainfall):
         
         if rainfall >= 30:
             english_methods.append("DS - Drainage System: Create channels to divert excess water")
-            sinhala_methods.append("DS - ජලාපවහන පද්ධතිය: අතිරික්ත ජලය ඉවත් කිරීමට කාණු සාදන්න")
+            sinhala_methods.append("යම් තද වර්ශාපතනයක් අපේක්ශා කිරීම හේතුවෙන් පාත්ති තුල ජලය රැස් වීම වැලැක්වීමට පැල වලට හානි නොවන සේ තාවකාලිකව වැලිකොට්ට යොදන්න")
             
             english_methods.append("CP - Cover Plants: Use polythene sheets as temporary rain protection")
-            sinhala_methods.append("CP - පැළ ආවරණය: තාවකාලික වැසි ආරක්ෂාව සඳහා පොලිතීන් ෂීට් භාවිතා කරන්න")
+            sinhala_methods.append("යම් තද වර්ශාපතනයක් ඇති විය හැකි බැවින් කුඩා පැල සදහා තාවකාලිකව වැසි ආරක්ෂාව සඳහා තාවකාලිකව පොලිතීන් ෂීට් හෝ වැස්මක් භාවිතා කරන්න")
         else:
             english_methods.append("DS - Drainage System: Ensure proper drainage around plants")
-            sinhala_methods.append("DS - ජලාපවහන පද්ධතිය: පැළ වටා නිසි ජලාපවහනය සහතික කරන්න")
+            sinhala_methods.append("සැලකිය යුතු වර්ශාපතනයක් ඇතිවිය හැකි බැවින්පාත්ති  වටා සාදා ඇති කාණු නැවත පෑදීමක් සිදුකිරීමෙන් ක්‍රමවත්ව ජලය බැස යෑමට ඉඩ හරින්න")
         
         english_methods.append("SP - Stake Plants: Tie plants to stakes to prevent damage from wind and water")
-        sinhala_methods.append("SP - පැළ රඳවන: සුළඟ සහ ජලයෙන් හානි වීම වැළැක්වීමට පැළ කූරු වලට බැඳ තබන්න")
+        sinhala_methods.append(" වර්ශාව සමග යම් සුළඟ තත්වයක් ඇතිවීමට ඉඩ ඇති හෙයින් සුළඟ සහ ජලයෙන් හානි වීම වැළැක්වීමට පැළ කෝටු වලට හානි නොවන සේ සිහින්ව බැඳ තබන්න")
         
         if rainfall >= 25:
-            english_methods.append("AF - Avoid Fertilizing: Postpone fertilization until drier conditions")
-            sinhala_methods.append("AF - පොහොර දැමීමෙන් වළකින්න: වියළි තත්ත්වයන් එනතුරු පොහොර දැමීම කල් දමන්න")
-            
             english_methods.append("PI - Pest Inspection: Check for increased pest activity after rain")
-            sinhala_methods.append("PI - පළිබෝධ පරීක්ෂාව: වැස්සෙන් පසු වැඩි වූ පළිබෝධ ක්‍රියාකාරකම් පරීක්ෂා කරන්න")
+            sinhala_methods.append(" වැස්සෙන් පසු  අනිවාර්‍යයෙන්ම පළිබෝධ ක්‍රියාකාරකම් පිලිබදව පරීක්ෂා කරන්න")
             
         return {
             "english": english_methods,
@@ -104,7 +97,7 @@ def get_protection_methods(protection_type, max_temp, min_temp, rainfall):
     
     return {
         "english": ["Standard care: Monitor plants regularly"],
-        "sinhala": ["සාමාන්‍ය රැකවරණය: නිතිපතා පැළෑටි නිරීක්ෂණය කරන්න"]
+        "sinhala": ["සාමාන්‍ය රැකවරණය ලබාදෙන්න ,පැල පිලිබද අවදානයෙන් සිටින්න"]
     }
 
 def rule_based_protection(rainfall, min_temp, max_temp):
@@ -254,7 +247,7 @@ def predict_7day_protection_needs(location, rainfall_forecast, min_temp_forecast
         }
         
         protection_type_map_sinhala = {
-            0: 'විශේෂ ආරක්ෂණයක් අවශ්‍ය නැත',
+            0: 'විශේෂ ආරක්ෂණයක් උපක්‍රමයක් අවශ්‍ය නැත',
             1: 'නියඟ ආරක්ෂණය',
             2: 'අධික වැසි ආරක්ෂණය'
         }
@@ -312,6 +305,19 @@ def predict_7day_protection_needs(location, rainfall_forecast, min_temp_forecast
                 day['is_best_day'] = True
             else:
                 day['is_best_day'] = False
+        
+        # Filter out any unwanted protection methods that might come from the model
+        for day in results:
+            if 'protection_methods_english' in day:
+                day['protection_methods_english'] = [
+                    method for method in day['protection_methods_english'] 
+                    if not method.startswith("SE - Soil Enrichment") and not method.startswith("AF - Avoid Fertilizing")
+                ]
+            if 'protection_methods_sinhala' in day:
+                day['protection_methods_sinhala'] = [
+                    method for method in day['protection_methods_sinhala'] 
+                    if not method.startswith("SE - ") and not method.startswith("AF - ")
+                ]
         
         return results
     

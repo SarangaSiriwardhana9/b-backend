@@ -261,7 +261,7 @@ def get_next_fertilizer_recommendation(history, today_date=None, location=None, 
                 
                 # If recommended date is beyond the forecast period
                 if not response["date_in_forecast"] and not response["date_has_passed"]:
-                    response["message"] += f" නිර්දේශිත දිනය වත්මන් දින 7 කාලගුණ අනාවැකිය ඉක්මවා ඇත."
+                    response["message"] += f" නිර්දේශිත දිනය වත්මන් දින 7 කාලගුණ අනාවැකි සීමාව ඉක්මවා ඇති බැවින් තවම එම දිනය සදහා කාලගුන අනාවැකි නිර්දේශ කිරීමක් සිදු කල නොහැක"
                     
             except Exception as e:
                 print(f"Error processing weather forecast: {e}")
@@ -298,5 +298,5 @@ def fertilizer_planning_api(history, location=None, rainfall_forecast=None):
         print(f"Error in fertilizer planning: {str(e)}")
         return {
             "error": str(e),
-            "message": "පොහොර නිර්දේශ උත්පාදනය කිරීමේදී දෝෂයක් ඇති විය."
+            "message": "පොහොර නිර්දේශ ලබාදීමේ  දෝෂයක් ඇති විය."
         }
